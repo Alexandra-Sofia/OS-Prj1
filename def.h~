@@ -1,0 +1,20 @@
+//def.h
+
+typedef struct{
+	struct treenode *next_level;
+	struct c_list *next_inline;
+}c_list;
+
+typedef struct{
+	char* word;
+	struct c_list *kids;
+}treenode;
+
+typedef struct{
+	char *word;
+	struct list *next;
+}list;
+
+int search(treenode*,char*,unsigned char*,list*);
+int freetree(treenode*);
+int check(char*,unsigned char*);
